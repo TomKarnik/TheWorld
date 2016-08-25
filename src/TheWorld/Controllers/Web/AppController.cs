@@ -55,8 +55,9 @@ namespace TheWorld.Controllers.Web
             try
             {
                 //var data = _context.Trips.ToList();
-                var data = _repository.GetAllTrips();
-                return View(data);
+                //var data = _repository.GetAllTrips();
+                //return View(data); <- Using client-side angularJS api calls instead!
+                return View();
             }
             catch (Exception ex)
             {
