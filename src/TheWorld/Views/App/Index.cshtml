@@ -1,0 +1,84 @@
+﻿@model IEnumerable<TheWorld.Models.Trip>
+
+@{
+    ViewBag.Title = "Home Page";
+    // Layout = "_Layout"; Moved to MVC View Start Page!
+}
+@*<!DOCTYPE html> MOVED TO _Layout.cshtml master page!
+    <html>
+    <head>
+        <title>The World - @ViewBag.Title</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/site.css" />
+    </head>
+    <body>
+        <div id="sidebar">
+            <img src="img/user1.jpg" alt="headshot" class="headshot" />
+            <span id="username">Gary Geek</span>
+            <ul class="menu">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div id="wrapper">
+            <div id="main">
+                <div>
+                    <button id="sidebarToggle">Hide Sidebar</button>
+                </div>*@
+
+@*<div class="row">
+    <div class="col-md-6">
+        <h1>The World</h1>
+        <p>This will be a fun website soon!</p>
+
+        <form>
+            <div class="form-group">
+                <label>Date</label>
+                <input class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <input class="form-control" />
+            </div>
+            <div><input type="submit" value="Add" class="btn btn-success" /></div>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        <h2>The Map</h2>
+
+        <ul>
+            @foreach (var item in Model)
+            {
+            <li>@item.Name : @item.DateCreated</li>
+            }
+        </ul>
+
+
+    </div>
+
+</div>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Welcome to the World!</h1>
+        <p>This app will allow you to plan world trips!</p>
+        <a asp-controller="App" asp-action="Trips" class="btn btn-lg btn-success">View My Trips</a>
+    </div>
+</div>
+
+@*</div> MOVED TO _Layout.cshtml master page!
+            <div id="footer">
+                &copy; 2016 The World Ltd.
+            </div>
+        </div>
+
+        <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="js/site.js">
+            //var ele = document.getElementById("username");
+            //ele.innerHTML = "Uncle Gary";
+        </script>
+
+    </body>
+    </html>*@
