@@ -10,7 +10,6 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": true,
       "environmentVariables": {
         "MailSettings__ToAddress": "mkarnik@live.com",
         "ASPNETCORE_ENVIRONMENT": "Development"
