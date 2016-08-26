@@ -14,6 +14,7 @@
         vm.stops = [];
         vm.errorMessage = "";
         vm.isBusy = true;
+        vm.newStop = {};
 
         $http.get("/api/trips/" + vm.tripName + "/stops")
             .then(function (response) {
