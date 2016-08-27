@@ -16,7 +16,9 @@
         vm.isBusy = true;
         vm.newStop = {};
 
-        $http.get("/api/trips/" + vm.tripName + "/stops")
+        var url = "/api/trips/" + vm.tripName + "/stops";
+
+        $http.get(url)
             .then(function (response) {
                 // Success
                 angular.copy(response.data, vm.stops);
@@ -29,6 +31,28 @@
             .finally(function () {
                 vm.isBusy = false;
             });
+
+        vm.addStop = function () {
+
+            vm.isBusy = true;
+
+            $http.post(url, vm.newStop)
+                .then(function (response) {
+                    // Success
+                    vm.stops.push(respone.data);
+                    _showMap(vm.stops);
+                    vm.newStop = {};
+                },
+                function (err) {
+                    // Error
+                    vm.errorMessage = "Failed to add stop!";
+                })
+                .finally(function () {
+                    vm.isBusy = false;
+                });
+
+        };
+
     }
 
     function _showMap(stops) {
